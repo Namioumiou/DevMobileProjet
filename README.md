@@ -1,8 +1,8 @@
-# Todo List
-Projet réaliser en Dev Mobile
+# Todo List  
+Projet réaliser en Dev Mobile  
 
 
-Liste des fonctionnalités implémentées :
+Liste des fonctionnalités implémentées :  
 [ ] Utilisation de l'Api Preference  
 [ ] Ecriture/lecture dans un Fichier  
 [ ] Utilisation de SQLite  
