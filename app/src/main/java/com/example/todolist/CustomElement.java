@@ -24,7 +24,7 @@ public class CustomElement extends androidx.appcompat.widget.AppCompatButton {
         int largeur = getMeasuredWidth();
 
         Paint paint = new Paint();
-        paint.setColor(Color.WHITE);
+        paint.setColor(Color.LTGRAY);
 
         paint.setStyle(Paint.Style.FILL);
         Path path=new Path();

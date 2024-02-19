@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".WelcomeFragment">
+    tools:context=".WelcomeActivity">
 
     <!-- TODO: Update blank fragment layout -->
     <ImageView
@@ -13,8 +13,8 @@
         android:layout_height="match_parent"
         android:src="@drawable/bluecheck"
         android:elevation="10dp" />
-
-
-
+    <com.example.todolist.CustomElement
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
 
 </FrameLayout>
