@@ -10,7 +10,6 @@ import androidx.fragment.app.FragmentTransaction;
 
 import android.os.Bundle;
 
-
 import com.example.todolist.databinding.ActivityMainBinding;
 public class MainActivity extends AppCompatActivity {
 
