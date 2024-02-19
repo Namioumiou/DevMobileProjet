@@ -3,7 +3,7 @@ Projet réaliser en Dev Mobile
 
 
 Liste des fonctionnalités implémentées :  
-[ ] Utilisation de l'Api Preference  
+- [ ] Utilisation de l'Api Preference  
 [ ] Ecriture/lecture dans un Fichier  
 [ ] Utilisation de SQLite  
 [ ] Utilisation de Room  
