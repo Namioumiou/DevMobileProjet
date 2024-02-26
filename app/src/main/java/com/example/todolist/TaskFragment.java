@@ -9,15 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 public class TaskFragment extends Fragment {
-    public static TaskFragment newInstance() {
-        TaskFragment task = new TaskFragment();
-        return task;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-    }
+    public TaskFragment() {}
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,

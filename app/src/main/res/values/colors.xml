@@ -3,4 +3,8 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="lavender">#8692F7</color>
+    <color name="hairy_heath">#6B240C</color>
+    <color name="rope">#994d1c</color>
+    <color name="jaffa">#E48F45</color>
+    <color name="manhattan">#F5CCA0</color>
 </resources>

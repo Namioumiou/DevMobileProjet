@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Base.Theme.ToDoList" parent="Theme.MaterialComponents.Light.DarkActionBar">
         <!-- Customize your light theme here. -->
-         <item name="colorPrimary">@color/lavender</item>
+         <item name="colorPrimary">@color/manhattan</item>
     </style>
 
     <style name="Theme.ToDoList" parent="Base.Theme.ToDoList" />
