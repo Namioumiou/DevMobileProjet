@@ -1,10 +1,10 @@
 package com.example.todolist;
 
-import static androidx.databinding.DataBindingUtil.setContentView;
-
 import android.content.Intent;
 import android.os.Bundle;
 
+import androidx.activity.OnBackPressedCallback;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.view.View;
@@ -23,6 +23,21 @@ public class WelcomeActivity extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_welcome);
+
+        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+            @Override
+            public void handleOnBackPressed() {
+                AlertDialog.Builder builder = new AlertDialog.Builder(WelcomeActivity.this);
+                builder.setMessage("Souhaitez vous fermer l'application ?")
+                        .setTitle("Vous nous quittez déjà...")
+                        .setPositiveButton("Fermer", (dialog, which) -> {
+                            finish();
+                            dialog.dismiss();
+                        })
+                        .setNegativeButton("Annuler", (dialog, which) -> dialog.dismiss())
+                        .show();
+            }
+        });
 
         ImageView buttomImage = findViewById(R.id.imageView2);
 

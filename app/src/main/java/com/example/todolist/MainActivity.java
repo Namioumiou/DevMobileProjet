@@ -27,20 +27,20 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
 
-        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
-            @Override
-            public void handleOnBackPressed() {
-                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
-                builder.setMessage("Souhaitez vous fermer l'application ?")
-                        .setTitle("Vous nous quittez déjà...")
-                        .setPositiveButton("Fermer", (dialog, which) -> {
-                            finish();
-                            dialog.dismiss();
-                        })
-                        .setNegativeButton("Annuler", (dialog, which) -> dialog.dismiss())
-                        .show();
-            }
-        });
+//        getOnBackPressedDispatcher().addCallback(new OnBackPressedCallback(true) {
+//            @Override
+//            public void handleOnBackPressed() {
+//                AlertDialog.Builder builder = new AlertDialog.Builder(MainActivity.this);
+//                builder.setMessage("Souhaitez vous fermer l'application ?")
+//                        .setTitle("Vous nous quittez déjà...")
+//                        .setPositiveButton("Fermer", (dialog, which) -> {
+//                            finish();
+//                            dialog.dismiss();
+//                        })
+//                        .setNegativeButton("Annuler", (dialog, which) -> dialog.dismiss())
+//                        .show();
+//            }
+//        });
 
         replaceFragment(new HomeFragment());
         binding.bottomNavView.setBackground(null);
