@@ -27,7 +27,7 @@
             android:padding="10dp">
 
             <EditText
-                android:id="@+id/editTextText"
+                android:id="@+id/pltxt_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@android:color/transparent"
@@ -40,9 +40,10 @@
                 app:layout_constraintTop_toTopOf="parent" />
 
             <EditText
-                android:id="@+id/editTextText2"
+                android:id="@+id/pltxt_note"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:gravity="start"
                 android:layout_marginTop="40dp"
                 android:layout_marginBottom="55dp"
                 android:background="@android:color/transparent"
@@ -52,7 +53,7 @@
                 app:layout_constraintBottom_toTopOf="@+id/linearLayout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/editTextText" />
+                app:layout_constraintTop_toBottomOf="@+id/pltxt_title" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
