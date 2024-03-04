@@ -7,12 +7,8 @@
     tools:context=".SettingsFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/settings"
-        android:gravity="center"
-        android:textSize="30dp"
-        android:textColor="@color/white"/>
+
+    <!--radio group for switching theme-->
+
 
 </FrameLayout>

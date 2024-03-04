@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "1004360019962",
+    "firebase_url": "https://devmobileprojet-18f4d-default-rtdb.firebaseio.com",
+    "project_id": "devmobileprojet-18f4d",
+    "storage_bucket": "devmobileprojet-18f4d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004360019962:android:925e7b4893344f5ee0fe43",
+        "android_client_info": {
+          "package_name": "com.example.todolist"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDndavHDSNoxJONric2EXWMygqjMux2k48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
