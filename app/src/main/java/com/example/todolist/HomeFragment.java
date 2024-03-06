@@ -10,8 +10,10 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import com.example.todolist.data.Database;
@@ -34,6 +36,16 @@ public class HomeFragment extends Fragment {
             }
         });
 
+        ListView list = (ListView) rootView.findViewById(R.id.listview_task);
+        ArrayAdapter<String> tableau =
+                new ArrayAdapter<String>(list.getContext(),
+                        R.layout.textview_task,
+
+                        R.id.textview_title_task);
+
+        for (int i=0; i<10; i++) {
+            tableau.add("coucou"); }
+        list.setAdapter(tableau);
 
 //        Button getBtn = rootView.findViewById(R.id.getBtn);
 //        getBtn.setOnClickListener(new View.OnClickListener() {
@@ -44,17 +56,7 @@ public class HomeFragment extends Fragment {
 ////                textView.setText(db.readTaskData());
 //            }
 //        });
-//
-//        Button addBtn = rootView.findViewById(R.id.addBtn);
-//        addBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("Home", "click addUser");
-//                EditText editText = (EditText) rootView.findViewById(R.id.addTxt);
-////                db.insertTaskData("Sarah", "Barrabé");
-//
-//            }
-//        });
+
         return rootView; // inflater.inflate(R.layout.fragment_home, null);
     }
 
