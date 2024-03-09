@@ -3,12 +3,28 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/manhattan"
+    android:background="@color/background"
     tools:context=".SettingsFragment">
 
     <!-- TODO: Update blank fragment layout -->
 
-    <!--radio group for switching theme-->
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
+        <RadioButton
+            android:id="@+id/darkModeRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Dark Mode" />
+
+        <RadioButton
+            android:id="@+id/lightModeRadioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light Mode" />
+    </RadioGroup>
 
 </FrameLayout>

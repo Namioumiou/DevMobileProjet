@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/manhattan"
+    android:background="@color/background"
     tools:context=".MainActivity">
 
     <FrameLayout
@@ -23,13 +23,13 @@
         app:fabCradleRoundedCornerRadius="50dp">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
             android:id="@+id/bottomNavView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_marginEnd="20dp"
-            app:labelVisibilityMode="labeled"
             android:background="@android:color/transparent"
-            app:menu="@menu/menu"/>
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/menu" />
 
     </com.google.android.material.bottomappbar.BottomAppBar>
 

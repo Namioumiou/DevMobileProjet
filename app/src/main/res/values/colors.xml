@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <!--Light Color-->
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="lavender">#8692F7</color>
-    <color name="hairy_heath">#6B240C</color>
-    <color name="rope">#994d1c</color>
-    <color name="jaffa">#E48F45</color>
-    <color name="manhattan">#F5CCA0</color>
+    <color name="back">#FFFFFFFF</color>
+    <color name="battleship_gray">#8F8F8F</color>
+    <color name="back2">#333333</color>
+
+    <color name="list">#6B240C</color>
+    <color name="button">#994d1c</color>
+    <color name="light">#E48F45</color>
+    <color name="background">#F5CCA0</color>
+
+
+
+
 </resources>

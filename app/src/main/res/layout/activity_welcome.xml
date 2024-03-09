@@ -9,12 +9,13 @@
     <!-- TODO: Update blank fragment layout -->
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:src="@drawable/bluecheck"
-        android:elevation="10dp" />
+        android:elevation="10dp"
+        android:src="@drawable/bluecheck" />
+
     <com.example.todolist.CustomElement
         android:layout_width="match_parent"
-        android:layout_height="match_parent"/>
+        android:layout_height="match_parent" />
 
 </FrameLayout>

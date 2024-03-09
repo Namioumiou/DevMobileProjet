@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/manhattan"
+    android:background="@color/background"
     tools:context=".HomeFragment">
 
     <LinearLayout
@@ -28,7 +28,7 @@
         android:contentDescription="@string/add_a_task"
         android:layout_marginBottom="70dp"
         android:layout_marginRight="10dp"
-        app:backgroundTint="@color/jaffa"
+        app:backgroundTint="@color/button"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
