@@ -50,7 +50,7 @@ public class TaskFragment extends Fragment {
                 ContentValues values = new ContentValues();
                 values.put(DatabaseContract.Database.COL_TITLE, title);
                 values.put(DatabaseContract.Database.COL_DESCRIPTION, note);
-                long newRowId = db.insert(DatabaseContract.Database.TABLE_NAME, null, values);
+                db.insert(DatabaseContract.Database.TABLE_NAME, null, values);
 
 //                db.insertTaskData(title, note, false);
                 replaceFragment(new HomeFragment());
