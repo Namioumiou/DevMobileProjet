@@ -1,5 +1,7 @@
 package com.example.todolist;
 
+import android.content.ContentValues;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -15,16 +17,22 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.example.todolist.data.Database;
+import com.example.todolist.data.DatabaseContract;
 
 public class TaskFragment extends Fragment {
-    public TaskFragment() {}
+    String title;
+    String description;
+    public TaskFragment(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
 
         View rootView = inflater.inflate(R.layout.fragment_task, container, false);
-        Database db = new Database(getContext());
+        Database dbHelper = new Database(getContext());
         Button btn_cancel = rootView.findViewById(R.id.btn_cancel);
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,10 +50,26 @@ public class TaskFragment extends Fragment {
 
                 String title = String.valueOf(pltxt_title.getText());
                 String note = String.valueOf(pltxt_note.getText());
-                db.insertTaskData(title, note, false);
+
+                SQLiteDatabase db = dbHelper.getWritableDatabase();
+                ContentValues values = new ContentValues();
+                values.put(DatabaseContract.Database.COL_TITLE, title);
+                values.put(DatabaseContract.Database.COL_DESCRIPTION, note);
+                db.insert(DatabaseContract.Database.TABLE_NAME, null, values);
+
+//                db.insertTaskData(title, note, false);
                 replaceFragment(new HomeFragment());
             }
         });
+
+        if(!title.isEmpty()) {
+            EditText pltxt_title = (EditText) rootView.findViewById(R.id.pltxt_title);
+            EditText pltxt_note = (EditText) rootView.findViewById(R.id.pltxt_note);
+
+            pltxt_title.setText(title);
+            pltxt_note.setText(description);
+            Log.i("DataBaase", title);
+        }
 
         return rootView;
     }
