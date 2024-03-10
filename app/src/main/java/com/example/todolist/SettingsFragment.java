@@ -11,8 +11,11 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
+
+import java.util.ArrayList;
 
 public class SettingsFragment extends Fragment {
 
@@ -61,6 +64,16 @@ public class SettingsFragment extends Fragment {
                 editor.apply();
             }
         });
+
+        ListView list = rootView.findViewById(R.id.listview);
+        ArrayList<TextSwitch> tsList = new ArrayList();
+        for (int i=0; i<40; i++) {
+            TextSwitch ts = new TextSwitch();
+            ts.setTexte("coucou " + i);
+            tsList.add(ts);
+        }
+        CustomAdapter adapter = new CustomAdapter(getContext(), tsList);
+        list.setAdapter(adapter);
 
         // Inflate the layout for this fragment
         return rootView;
