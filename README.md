@@ -1,6 +1,7 @@
 # Todo List  
 Projet réaliser en Dev Mobile  
 
+Avant de vérifier les fonctionnalités, il vous faudra copier l'image profil.png présent à la racine du github au sein du dossier storage/emulated/0
 
 Liste des fonctionnalités implémentées :  
 [x] Utilisation de l'Api Preference  
