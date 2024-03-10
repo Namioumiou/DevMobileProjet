@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Night Color-->
+    <color name="white">#FFFFFFFF</color>
+    <color name="battleship_gray">#FF000000</color>
+    <color name="back">#8F8F8F</color>
+    <color name="background">#474747</color>
+
+    <color name="list">#371206</color>
+    <color name="back2">#562C10</color>
+    <color name="light">#8F4E14</color>
+    <color name="button">#E88821</color>
+
+</resources>
