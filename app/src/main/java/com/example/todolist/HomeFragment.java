@@ -2,6 +2,7 @@ package com.example.todolist;
 
 import android.annotation.SuppressLint;
 import android.content.ContentValues;
+import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
@@ -15,11 +16,13 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.todolist.data.Database;
 import com.example.todolist.data.DatabaseContract;
@@ -41,7 +44,7 @@ public class HomeFragment extends Fragment {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                replaceFragment(new TaskFragment());
+                replaceFragment(new TaskFragment("", ""));
             }
         });
 
@@ -65,32 +68,30 @@ public class HomeFragment extends Fragment {
         }
         list.setAdapter(tableau);
 
-//        Log.e("DataBaseItem", "teest");
-//        ListView list = (ListView) rootView.findViewById(R.id.listview_task);
-//        ArrayAdapter<String> tableau = new ArrayAdapter<String>(list.getContext(), R.layout.textview_task, R.id.textview_title_task);
-//        while(cursor.moveToNext()) {
-//            long itemId = cursor.getLong(cursor.getColumnIndexOrThrow(DatabaseContract.Database._ID));
-//            tableau.add("teeeest");
-//        }
-//        cursor.close();
+        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position,
+                                    long id) {
+                String  itemValue = (String) list.getItemAtPosition(position);
 
-//        ListView list = (ListView) rootView.findViewById(R.id.listview_task);
-//        ArrayAdapter<String> tableau = new ArrayAdapter<String>(list.getContext(), R.layout.textview_task, R.id.textview_title_task);
-////
-////        Log.i("DataBase", cursor.getString(2));
-//        for (int i=0; i<10; i++) {
-//            tableau.add("coucou"); }
-//        list.setAdapter(tableau);
-
-//        Button getBtn = rootView.findViewById(R.id.getBtn);
-//        getBtn.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                Log.d("Home", "click getUser");
-//                TextView textView = (TextView) rootView.findViewById(R.id.getTxt);
-////                textView.setText(db.readTaskData());
-//            }
-//        });
+                SQLiteDatabase db = dbHelper.getReadableDatabase();
+                String select = new String("SELECT * from " + DatabaseContract.Database.TABLE_NAME);
+                Cursor cursor = db.rawQuery(select, null);
+                String result = "";
+                if (cursor.getCount() > 0) {
+                    cursor.moveToFirst();
+                    do {
+                        int i = cursor.getColumnIndex(DatabaseContract.Database.COL_TITLE);
+                        if(Objects.equals(cursor.getString(i), itemValue)) {
+                            int j = cursor.getColumnIndex(DatabaseContract.Database.COL_DESCRIPTION);
+                            String title = cursor.getString(i);
+                            String description = cursor.getString(j);
+                            replaceFragment(new TaskFragment(title, description));
+                        }
+                    } while (cursor.moveToNext());
+                }
+            }
+        });
 
         return rootView; // inflater.inflate(R.layout.fragment_home, null);
     }

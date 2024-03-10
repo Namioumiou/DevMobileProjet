@@ -20,7 +20,12 @@ import com.example.todolist.data.Database;
 import com.example.todolist.data.DatabaseContract;
 
 public class TaskFragment extends Fragment {
-    public TaskFragment() {}
+    String title;
+    String description;
+    public TaskFragment(String title, String description) {
+        this.title = title;
+        this.description = description;
+    }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -56,6 +61,15 @@ public class TaskFragment extends Fragment {
                 replaceFragment(new HomeFragment());
             }
         });
+
+        if(!title.isEmpty()) {
+            EditText pltxt_title = (EditText) rootView.findViewById(R.id.pltxt_title);
+            EditText pltxt_note = (EditText) rootView.findViewById(R.id.pltxt_note);
+
+            pltxt_title.setText(title);
+            pltxt_note.setText(description);
+            Log.i("DataBaase", title);
+        }
 
         return rootView;
     }
