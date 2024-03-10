@@ -12,7 +12,7 @@ Liste des fonctionnalités implémentées :
 [x] Gestion du bouton Back (message pour confirmer que l'on veut réellement quitter l'application)  
 [ ] L'affichage d'une liste avec son adapter  
 [ ] L'affichage d'une liste avec un custom adapter (avec gestion d’événement)  
-[ ] La pertinence d'utilisation des layouts (L'application doit être responsive et supporter: portrait/paysage et tablette)  
+[x] La pertinence d'utilisation des layouts (L'application doit être responsive et supporter: portrait/paysage et tablette)  
 [x] L'utilisation de d’événement améliorant l'ux (pex: swipe). Préciser :  Transitions entre les fragments, Dark mode  
 [x] La réalisation de composant graphique custom (Paint 2D, Calendrier,...) Préciser :  Background de WelcomeActivity la page quand on arrive sur l'app. Couleur gris clair  
 [ ] Les taches en background (codage du démarrage d'un thread)  
